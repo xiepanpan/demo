@@ -20,7 +20,7 @@ public class AccountDaoImpl implements IAccountDao {
 
     @Override
     public int add(Account account) {
-        return jdbcTemplate.update("INSERT INTO account(NAME,money) vlaues(?,?) ",
+        return jdbcTemplate.update("INSERT INTO account(NAME,money) VALUES(?,?) ",
                 account.getName(),account.getMoney());
     }
 

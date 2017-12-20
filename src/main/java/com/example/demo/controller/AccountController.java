@@ -25,6 +25,7 @@ public class AccountController {
         return iAccountService.findAccountById(id);
     }
 
+    //http://localhost:8082/account/1?id=1&name=4&money=400
     @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     public String updateAccount(@PathVariable("id")int id, @RequestParam(value = "name",required = true)String name,
                                 @RequestParam(value = "money",required = true)double money){
@@ -40,7 +41,7 @@ public class AccountController {
         }
     }
 
-    @RequestMapping(value = "",method = RequestMethod.POST)
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String postAccount(@RequestParam(value = "name")String name,@RequestParam(value = "money")double money){
         Account account=new Account();
         account.setName(name);

@@ -25,7 +25,7 @@ public class AccountController {
         return iAccountService.findAccountById(id);
     }
 
-    @RequestMapping(value = "{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     public String updateAccount(@PathVariable("id")int id, @RequestParam(value = "name",required = true)String name,
                                 @RequestParam(value = "money",required = true)double money){
         Account account =new Account();

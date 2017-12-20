@@ -1,0 +1,11 @@
+my:
+    name: panda
+    age: 22
+    number: ${random.int}
+    uuid: ${random.uuid}
+    max: ${random.int(10)}
+    value: ${random.value}
+    greeting: hi,this is ${my.name}
+spring:
+  profiles:
+    active: dev

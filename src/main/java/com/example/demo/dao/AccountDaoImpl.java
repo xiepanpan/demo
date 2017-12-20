@@ -37,7 +37,7 @@ public class AccountDaoImpl implements IAccountDao {
 
     @Override
     public Account findAccountById(int id) {
-        List<Account> accountList = jdbcTemplate.query("select * from account WHERE id=?", new Object[]{},
+        List<Account> accountList = jdbcTemplate.query("select * from account WHERE id=?", new Object[]{id},
                 new BeanPropertyRowMapper<>(Account.class));
         if (accountList!=null&&accountList.size()>0){
             Account account = accountList.get(0);

@@ -1,0 +1,8 @@
+= 用spring Rest Docs 构建文档
+熊猫盼盼@panda at http://localhost:8080:
+
+.request
+include::{snippets}/home/http-request.adoc[]
+
+.response
+include::{snippets}/home/http-response.adoc[]

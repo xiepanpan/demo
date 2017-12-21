@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/accountjpa")
 public class AccountJpaController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class AccountJpaController {
         return accountDao.findOne(id);
     }
 
-    //http://localhost:8082/account/1?name=liudehua&money=32
+    //http://localhost:8082/accountjpa/1?name=liudehua&money=32
     @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     public String updateAccount(@PathVariable("id")int id, @RequestParam(value = "name",required = true)String name,
                                 @RequestParam(value = "money",required = true)double money){
@@ -36,7 +36,7 @@ public class AccountJpaController {
         return accountUpdate.toString();
     }
 
-    //http://localhost:8082/account/?name=mm&money=32
+    //http://localhost:8082/accountjpa/?name=mm&money=32
     @RequestMapping(value = "",method = RequestMethod.POST)
     public String postAccount(@RequestParam(value = "name")String name,@RequestParam(value = "money")double money) {
         Account account=new Account();
